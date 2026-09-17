@@ -1,8 +1,10 @@
-// 内置医学知识图谱（辅助判定层）：疾病 / 危险因素 / 药物 / 干预 / 指标
+// 内置医学知识图谱（辅助判定层）：疾病 / 危险因素 / 药物 / 干预 / 指标 / 文献
 // 关键节点挂载《中国高血压防治指南（2024 年修订版）》条款引用
+// v8：接入文献证据库（literature.ts），文献节点经「证据支持」边挂接主题节点
 import type { CaseId } from "./data"
+import { LITERATURE, LIT_BY_NODE } from "./literature"
 
-export type NodeType = "disease" | "riskfactor" | "drug" | "intervention" | "indicator" | "case"
+export type NodeType = "disease" | "riskfactor" | "drug" | "intervention" | "indicator" | "case" | "literature"
 
 export interface KGNode {
   id: string
@@ -11,7 +13,7 @@ export interface KGNode {
   clause?: { no: string; text: string }
 }
 
-export type EdgeType = "合并" | "危险因素" | "首选治疗" | "生活方式干预" | "增加风险" | "降低风险" | "靶器官损害" | "监测指标" | "表型"
+export type EdgeType = "合并" | "危险因素" | "首选治疗" | "生活方式干预" | "增加风险" | "降低风险" | "靶器官损害" | "监测指标" | "表型" | "证据支持"
 
 export interface KGEdge {
   from: string
@@ -151,4 +153,41 @@ export const NODE_TYPE_COLORS: Record<NodeType, string> = {
   drug: "#059669",
   intervention: "#0d9488",
   indicator: "#7c3aed",
+  literature: "#4f46e5", // 靛蓝：文献/证据
+}
+
+// ── 文献证据层：文献节点 + 证据支持边（不进径向图渲染，供徽章计数与证据列表）──
+export const LIT_NODES: KGNode[] = LITERATURE.map((it) => ({
+  id: it.id,
+  label: it.title,
+  type: "literature" as const,
+}))
+
+export const LIT_EDGES: KGEdge[] = LITERATURE.flatMap((it) =>
+  it.kgNodes.map((n) => ({ from: it.id, to: n, type: "证据支持" as const })),
+)
+
+// 全量图谱（含文献层），供完整性校验
+export const KG_ALL_NODES: KGNode[] = [...KG_NODES, ...LIT_NODES]
+export const KG_ALL_EDGES: KGEdge[] = [...KG_EDGES, ...LIT_EDGES]
+
+// 节点关联文献计数（证据徽章）
+export function evidenceCount(nodeId: string): number {
+  return LIT_BY_NODE[nodeId]?.length ?? 0
+}
+
+// 当前病例子图命中的文献（子图节点关联的文献，去重）
+export function caseEvidence(caseId: CaseId) {
+  const sub = queryCaseSubgraph(caseId)
+  const nodeIds = new Set(sub.nodes.map((n) => n.id))
+  const seen = new Set<string>()
+  const hits: { lit: (typeof LITERATURE)[number]; viaNodes: string[] }[] = []
+  for (const it of LITERATURE) {
+    const via = it.kgNodes.filter((n) => nodeIds.has(n))
+    if (via.length && !seen.has(it.id)) {
+      seen.add(it.id)
+      hits.push({ lit: it, viaNodes: via })
+    }
+  }
+  return { subgraph: sub, hits }
 }

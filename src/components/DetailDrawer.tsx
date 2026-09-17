@@ -1,5 +1,6 @@
 import { useApp } from "@/state/store"
 import { STEPS } from "@/lib/data"
+import { LIT_TOTAL } from "@/lib/literature"
 import { Prov } from "@/components/Prov"
 
 // 「数据明细」抽屉：当前阶段的原始指标 / 模型版本 / 数据来源统计
@@ -26,6 +27,7 @@ export function DetailDrawer() {
       { label: "规则引擎", value: "血压分级表 5 档 · 4×3 危险分层矩阵 · 11 项因子核对", src: "rule" },
       { label: "指南条款库", value: "中国高血压防治指南 2024 修订版 · 逐条引用", src: "rule" },
       { label: "知识图谱", value: "35 节点 · 46 边 · 8 类关系 · 一跳子图推理", src: "rule" },
+      { label: "文献证据库", value: `${LIT_TOTAL} 篇 · 五大分类 · 经「证据支持」边挂接图谱节点`, src: "rule" },
       { label: "解释模型", value: "deepseek-chat · temperature 0.3 · 禁止更改结论", src: "model", conf: 92 },
       { label: "审计日志", value: "已写入 · 哈希链 #a3f9…c21e", src: "rule" },
     ],

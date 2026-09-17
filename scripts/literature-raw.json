@@ -1,0 +1,879 @@
+[
+ {
+  "title": "Comparative effectiveness of monotherapies and combination therapies for patients with hypertension: protocol for a systematic review with network meta-analyses",
+  "author": "Hutton 等",
+  "year": "2013",
+  "category": "大模型×高血压",
+  "topics": [
+   "药物治疗"
+  ],
+  "kgNodes": [
+   "amlodipine"
+  ]
+ },
+ {
+  "title": "ChatHTN: a consultation model for hypertension",
+  "author": "Wang 等",
+  "year": "2026",
+  "category": "大模型×高血压",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Evaluating the Clinical Effectiveness and Patient Experience of a Large Language Model-Based Digital Tool for Home-Based Blood Pressure Management: Mixed Methods Study",
+  "author": "Jelic 等",
+  "year": "2025",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "RAG-Enhanced Open SLMs for Hypertension Management Chatbots",
+  "author": "Aguzzi 等",
+  "year": "2025",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Enhancing clinical decision-making: Optimizing ChatGPT's performance in hypertension care",
+  "author": "Miao 等",
+  "year": "2024",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Performance of Large Language Models in Analyzing Common Hypertension Scenarios",
+  "author": "Zand 等",
+  "year": "2026",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Large Language Model Agent for Managing Patients With Suspected Hypertension",
+  "author": "Wang 等",
+  "year": "2026",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "The role of artificial intelligence in hypertension management",
+  "author": "Dherani 等",
+  "year": "2026",
+  "category": "大模型×高血压",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Integrating large language models with human expertise for disease detection in electronic health records",
+  "author": "Pan 等",
+  "year": "2025",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Assessment of ChatGPT-4.0 versus ChatGPT-Mini in Generating Guideline-Based Hypertension Content",
+  "author": "Ataídes 等",
+  "year": "2026",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "A Heart-to-Heart With ChatGPT: AI Applications in Hypertension",
+  "author": "Layton",
+  "year": "2025",
+  "category": "大模型×高血压",
+  "topics": [
+   "家庭血压监测",
+   "大模型推理",
+   "心脏靶器官"
+  ],
+  "kgNodes": [
+   "homeBP",
+   "hf"
+  ]
+ },
+ {
+  "title": "Evaluation of the Accuracy of ChatGPT in Answering Clinical Questions on the Japanese Society of Hypertension Guidelines",
+  "author": "Kusunose 等",
+  "year": "2023",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "AI, Machine Learning, and ChatGPT in Hypertension",
+  "author": "Layton",
+  "year": "2024",
+  "category": "大模型×高血压",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "A Digital Twin of the Angiotensin II Receptor Blocker Losartan: Physiologically Based Modeling of Blood Pressure Regulation",
+  "author": "Tensil 等",
+  "year": "2026",
+  "category": "数字孪生",
+  "topics": [
+   "数字孪生"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Artificial Intelligence and Advanced Digital Health for Hypertension: Evolving Tools for Precision Cardiovascular Care",
+  "author": "Skalidis 等",
+  "year": "2025",
+  "category": "数字孪生",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Artificial intelligence and digital twins for the personalised prediction of hypertension risk",
+  "author": "Naik 等",
+  "year": "2025",
+  "category": "数字孪生",
+  "topics": [
+   "数字孪生"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "From clinic to home monitoring: Diagnostic strategies and evidence landscape of white-coat uncontrolled hypertension",
+  "author": "Zheng 等",
+  "year": "2026",
+  "category": "数字孪生",
+  "topics": [
+   "白大衣高血压"
+  ],
+  "kgNodes": [
+   "whiteCoat"
+  ]
+ },
+ {
+  "title": "Young Age at Hysterectomy and Elevated Hypertension Risk: A Combined Observational and Mendelian Randomization Study",
+  "author": "Yan 等",
+  "year": "2025",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Association of Rare Variants in Kidney Developmental Genes With Chronic Kidney Disease and Blood Pressure: A UK Biobank Study",
+  "author": "Spector 等",
+  "year": "2025",
+  "category": "真实数据",
+  "topics": [
+   "肾损害指标"
+  ],
+  "kgNodes": [
+   "microalb"
+  ]
+ },
+ {
+  "title": "Selenium and Lead Exposure are Associated with Elevated Blood Pressure in Individuals with Undiagnosed Hypertension: Findings from NHANES 2013-2020",
+  "author": "Tang 等",
+  "year": "2025",
+  "category": "真实数据",
+  "topics": [
+   "流行病学数据"
+  ],
+  "kgNodes": [
+   "elderly"
+  ]
+ },
+ {
+  "title": "Remnant Cholesterol is Associated with Blood Pressure Control in US Adults with Hypertension: NHANES 2007-2018 Analysis",
+  "author": "Feng 等",
+  "year": "2025",
+  "category": "真实数据",
+  "topics": [
+   "流行病学数据"
+  ],
+  "kgNodes": [
+   "elderly"
+  ]
+ },
+ {
+  "title": "Designing an implementation science clinical trial to integrate hypertension and cardiovascular diseases care into existing HIV services package in Botswana (InterCARE)",
+  "author": "Youssouf 等",
+  "year": "2024",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Update on the INTEnsive ambulance-delivered blood pressure Reduction in hyper-ACute stroke Trial (INTERACT4): progress and baseline features in 2053 participants",
+  "author": "Chen 等",
+  "year": "2023",
+  "category": "真实数据",
+  "topics": [
+   "脑卒中风险"
+  ],
+  "kgNodes": [
+   "stroke"
+  ]
+ },
+ {
+  "title": "Reach out behavioral intervention for hypertension initiated in the emergency department connecting multiple health systems: study protocol for a randomized control trial",
+  "author": "Meurer 等",
+  "year": "2020",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "The Treatment In Morning versus Evening (TIME) study: analysis of recruitment, follow-up and retention rates post-recruitment",
+  "author": "Rorie 等",
+  "year": "2017",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "MEF2 in cardiac hypertrophy in response to hypertension",
+  "author": "Cornwell 等",
+  "year": "2023",
+  "category": "真实数据",
+  "topics": [
+   "心脏靶器官"
+  ],
+  "kgNodes": [
+   "hf"
+  ]
+ },
+ {
+  "title": "Retrospective review of the use of as-needed hydralazine and labetalol for the treatment of acute hypertension in hospitalized medicine patients",
+  "author": "Gaynor 等",
+  "year": "2018",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Long Short-Term Memory Network for Accelerometer-Based Hypertension Classification",
+  "author": "Ouellet 等",
+  "year": "2025",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Nurses' Experience of Using an Electronic Medical Records - OpenMRS Module for the Management of Hypertension and Diabetes in Rwanda: A Qualitative Study",
+  "author": "Ntakirutimana 等",
+  "year": "2024",
+  "category": "真实数据",
+  "topics": [
+   "糖尿病合并"
+  ],
+  "kgNodes": [
+   "t2dm"
+  ]
+ },
+ {
+  "title": "Making Medication Data Meaningful: Illustrated with Hypertension",
+  "author": "Williams 等",
+  "year": "2016",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Implementation of a Cloud-based Blood Pressure Data Management System",
+  "author": "Kuo",
+  "year": "2015",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "A mobile logbook to diagnose masked hypertension: a pilot application",
+  "author": "Eccher 等",
+  "year": "2014",
+  "category": "真实数据",
+  "topics": [
+   "家庭血压监测",
+   "隐匿性高血压"
+  ],
+  "kgNodes": [
+   "homeBP",
+   "maskedHtn"
+  ]
+ },
+ {
+  "title": "Making Medication Data Meaningful: Illustrated with Hypertension",
+  "author": "Williams Richard 等",
+  "year": "2016",
+  "category": "真实数据",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "BiomedicalSignalProcessingandControl68(2021)102813",
+  "author": "Contents lists available at ScienceDirect",
+  "year": "2021",
+  "category": "数据统计",
+  "_file": "1-s2.0-S1746809421004109-main.pdf",
+  "_head": "BiomedicalSignalProcessingandControl68(2021)102813\nContents lists available at ScienceDirect\nBiomedical Signal Processing and Control\njournal homepage: www.elsevier.com/locate/bspc\nA review of machine learning in hypertension detection and blood pressure\nestimation based on clinical and physiological data\nErick Martinez-Ríosa, Luis Montesinosa, Mariel Alfaro-Poncea, Leandro Pecchiab\naTecnologico de Monterrey, School of Engineering and Sciences, Mexico City, 14380, Mexico",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Machine Learning Approaches for",
+  "author": "Predicting Hypertension",
+  "year": "2022",
+  "category": "数据统计",
+  "_file": "fcvm-09-839379.pdf",
+  "_head": "ORIGINALRESEARCH\npublished:31March2022\ndoi:10.3389/fcvm.2022.839379\nMachine Learning Approaches for\nPredicting Hypertension and Its\nAssociated Factors Using\nPopulation-Level Data From Three\nSouth Asian Countries",
+  "topics": [
+   "家庭血压监测"
+  ],
+  "kgNodes": [
+   "homeBP"
+  ]
+ },
+ {
+  "title": "Predicting the Risk of Hypertension",
+  "author": "Based on Several Easy-to-Collect",
+  "year": "2021",
+  "category": "数据统计",
+  "_file": "fpubh-09-619429.pdf",
+  "_head": "ORIGINALRESEARCH\npublished:24September2021\ndoi:10.3389/fpubh.2021.619429\nPredicting the Risk of Hypertension\nBased on Several Easy-to-Collect\nRisk Factors: A Machine Learning\nMethod\nHuanhuanZhao1,2,3,XiaoyuZhang1,2,YangXu1,LishengGao1,ZuchangMa1*,YiningSun1",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Hypertension Statistics for US Adults: An",
+  "author": "Open-Source Web Application for Analysis and",
+  "year": "1999",
+  "category": "数据统计",
+  "_file": "jaeger-et-al-2023-hypertension-statistics-for-us-adults-an-open-source-web-application-for-analysis-and-visualization.pdf",
+  "_head": "Hypertension\nORIGINAL ARTICLE\nHypertension Statistics for US Adults: An\nOpen-Source Web Application for Analysis and\nVisualization of National Health and Nutrition\nExamination Survey Data\nByron C. Jaeger , Ligong Chen, Kathryn Foti , Shakia T. Hardy , Adam P. Bress , Sean P. Kane , Lei Huang,\nJennifer S. Herrick , Catherine G. Derington , Bharat Poudel , Ashley Christenson, Lisandro D. Colantonio , Paul Muntner",
+  "topics": [
+   "流行病学数据"
+  ],
+  "kgNodes": [
+   "elderly"
+  ]
+ },
+ {
+  "title": "2001NaturePublishingGroup Allrightsreserved0950-9240/01$15.00",
+  "author": "A Sub-study of the ASCOT Trial",
+  "year": "2001",
+  "category": "生活方式与综合管理",
+  "_file": "10.1038@sj.jhh.1001076.pdf",
+  "_head": "JournalofHumanHypertension(2001)15,Suppl1,S47–S51\n2001NaturePublishingGroup Allrightsreserved0950-9240/01$15.00\nwww.nature.com/jhh\nA Sub-study of the ASCOT Trial\nAmbulatory blood pressure monitoring\nand 24-h blood pressure control as\npredictors of outcome in treated\nhypertensive patients",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "THE EDITORS’ PERSPECTIVES",
+  "author": "July 2025 (cid:1) Volume 282",
+  "year": "2025",
+  "category": "生活方式与综合管理",
+  "_file": "A-Hypertensive-Conundrum.pdf",
+  "_head": "THE EDITORS’ PERSPECTIVES\nJuly 2025 (cid:1) Volume 282\nCopyrightª2025byElsevierInc.\nA Hypertensive T\nhecurrentvolumeofTheJournalfeaturesanarticlebyFlynnetalfromtheSHIP-\nConundrum AHOY(StudyofHighBloodPressureinPediatrics:AdultHypertensionOnsetin\nYouth)study,whichaddsaconfusingnewtwisttoourapproachtohypertensionin\n—ThomasR.Welch,MD children.Thecontextofthisstudyisrootedinourcurrentapproachtoelevatedblood",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "BMJ2012;345:e4688doi:10.1136/bmj.e4688(Published16July2012) Page1of2",
+  "author": "Patients’ concepts of hypertension",
+  "year": "",
+  "category": "生活方式与综合管理",
+  "_file": "altiner2012.pdf",
+  "_head": "BMJ2012;345:e4688doi:10.1136/bmj.e4688(Published16July2012) Page1of2\nEditorials\nEDITORIALS\nPatients’ concepts of hypertension\nNew insights support the need for more shared decision making independent of cultural background\nAttila Altiner professor of general practice\nDepartmentofGeneralPractice,UniversityMedicineRostock,Rostock18055,Germany\nTheimprovementinmedicalcarethrougheducational theircareandrelateddecisions.Isthemedicalprofession",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "HypertensionResearch(2024)47:2053–2063",
+  "author": "Special Issue: Current evidence",
+  "year": "2024",
+  "category": "生活方式与综合管理",
+  "_file": "Associations-and-attributable-burden-between-risk-factors-and-all-cause-and-cause-specific.pdf",
+  "_head": "HypertensionResearch(2024)47:2053–2063\nhttps://doi.org/10.1038/s41440-024-01717-4\nARTICLE\nSpecial Issue: Current evidence and perspectives for hypertension management in Asia\nAssociations and attributable burden between risk factors and all-\nfi\ncause and cause-speci c mortality at different ages in patients with\nhypertension",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Author(s): Massimo Cacciari",
+  "author": "Source: Revista de Letras",
+  "year": "2005",
+  "category": "生活方式与综合管理",
+  "_file": "bahloul2021 (1).pdf",
+  "_head": "NOMES DE LUGAR: CONFIM\nAuthor(s): Massimo Cacciari\nSource: Revista de Letras, Vol. 45, No. 1 (2005), pp. 13-22\nPublished by: UNESP Universidade Estadual Paulista Julio de Mesquita Filho\nStable URL: https://www.jstor.org/stable/10.2307/26459823\nJSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide\nrange of content in a trusted digital archive. We use information technology and tools to increase productivity and\nfacilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Author(s): Massimo Cacciari",
+  "author": "Source: Revista de Letras",
+  "year": "2005",
+  "category": "生活方式与综合管理",
+  "_file": "bahloul2021 (2).pdf",
+  "_head": "NOMES DE LUGAR: CONFIM\nAuthor(s): Massimo Cacciari\nSource: Revista de Letras, Vol. 45, No. 1 (2005), pp. 13-22\nPublished by: UNESP Universidade Estadual Paulista Julio de Mesquita Filho\nStable URL: https://www.jstor.org/stable/10.2307/26459823\nJSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide\nrange of content in a trusted digital archive. We use information technology and tools to increase productivity and\nfacilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Author(s): Massimo Cacciari",
+  "author": "Source: Revista de Letras",
+  "year": "2005",
+  "category": "生活方式与综合管理",
+  "_file": "bahloul2021.pdf",
+  "_head": "NOMES DE LUGAR: CONFIM\nAuthor(s): Massimo Cacciari\nSource: Revista de Letras, Vol. 45, No. 1 (2005), pp. 13-22\nPublished by: UNESP Universidade Estadual Paulista Julio de Mesquita Filho\nStable URL: https://www.jstor.org/stable/10.2307/26459823\nJSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide\nrange of content in a trusted digital archive. We use information technology and tools to increase productivity and\nfacilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "HypertensionResearch(2023)46:1821–1822",
+  "author": "",
+  "year": "2023",
+  "category": "生活方式与综合管理",
+  "_file": "Behavior-of-albuminuria-in-patients-with-a-more-intense-control-of-their-blood-pressure.pdf",
+  "_head": "HypertensionResearch(2023)46:1821–1822\nhttps://doi.org/10.1038/s41440-023-01275-1\nCORRESPONDENCE\nBehavior of albuminuria in patients with a more intense control of\ntheir blood pressure\nMiguel Angel Maria-Tablado1\nKeywords Albuminuria ● Blood pressure ● Control ● Intensive ● LDL colesterol\nReceived:2March2023/Accepted:17March2023/Publishedonline:9May2023",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Current Psychology (2024) 43:698–706",
+  "author": "Behavioural approach-avoidance tendencies among individuals with",
+  "year": "2024",
+  "category": "生活方式与综合管理",
+  "_file": "Behavioural-approach-avoidance-tendencies-among-individuals-with-elevated-blood-pressure.pdf",
+  "_head": "Current Psychology (2024) 43:698–706\nhttps://doi.org/10.1007/s12144-023-04337-2\nBehavioural approach-avoidance tendencies among individuals with\nelevated blood pressure\nMeenakshi Shukla1,2 · Jennifer Y. F. Lau1,3 · Rakesh Pandey4\nAccepted: 26 January 2023 / Published online: 10 February 2023\n© The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2023, corrected publication 2023\nAbstract",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Risk Factors Associated With Newly Diagnosed High",
+  "author": "Blood Pressure in Men",
+  "year": "2008",
+  "category": "生活方式与综合管理",
+  "_file": "carlsson2008.pdf",
+  "_head": "articles\nnature publishing group\nRisk Factors Associated With Newly Diagnosed High\nBlood Pressure in Men and Women\nAxel C. Carlsson1, Per E. Wändell1, Ulf de Faire2,3 and Mai-Lis Hellénius4\nBackground (odds ratio (OR), men = 0.73, 95% confidence interval (CI) = 0.54–0.99)\nHypertension is a major risk factor for cardiovascular diseases. Early and university education was protective in both men (OR = 0.66, 95%\ndiagnosis and prevention of hypertension are of great importance CI = 0.52–0.85) and women (OR = 0.45, 95% CI = 0.34–0.59). Regular",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "European Journal of Nutrition (2023) 62:2805–2825",
+  "author": "Comparison of data‑driven identified hypertension‑protective dietary",
+  "year": "2023",
+  "category": "生活方式与综合管理",
+  "_file": "Comparison-of-data-driven-identified-hypertension-protective-dietary-patterns-among-Chinese.pdf",
+  "_head": "European Journal of Nutrition (2023) 62:2805–2825\nhttps://doi.org/10.1007/s00394-023-03195-9\nORIGINAL CONTRIBUTION\nComparison of data‑driven identified hypertension‑protective dietary\npatterns among Chinese adults: based on a nationwide study\nYuxiang Yang1 · Wei Piao1,2 · Shuya Cai1 · Kun Huang1 · Changzheng Yuan3 · Xue Cheng1 · Ling Zhang4 · Yuge Li1 ·\nLiyun Zhao1,2 · Dongmei Yu1,2\nReceived: 27 February 2023 / Accepted: 9 June 2023 / Published online: 19 June 2023",
+  "topics": [
+   "膳食与限盐"
+  ],
+  "kgNodes": [
+   "saltLimit"
+  ]
+ },
+ {
+  "title": "Psychiatr. & Psychobiol., 4 (1989) 347-355 347",
+  "author": "",
+  "year": "1989",
+  "category": "生活方式与综合管理",
+  "_file": "consoli1989.pdf",
+  "_head": "Psychiatr. & Psychobiol., 4 (1989) 347-355 347\n© Elsevier, Paris\nOriginal article\nA behavioral typology of hypertensive out-patients followed up in\ngeneral practice\nS.M. CONSOLI* and M.E. SAFAR\nDepartment of Psychiatry and the Hypertension Research Center, Diagnosis Center, Broussais Hospital,\nParis, France",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "HypertensionResearch(2024)47:562–563",
+  "author": "Constipation",
+  "year": "2024",
+  "category": "生活方式与综合管理",
+  "_file": "Constipation-and-high-blood-pressure-variability.pdf",
+  "_head": "HypertensionResearch(2024)47:562–563\nhttps://doi.org/10.1038/s41440-023-01514-5\nCOMMENT\nConstipation and high blood pressure variability\nEikan Mishima1,2\nKeywords Hypertension ● Bowel movement ● Cardiovascular events ● Autonomic nerve system ● Microbiota\nReceived:4October2023/Accepted:20October2023/Publishedonline:20November2023\n©TheAuthor(s)2023.Thisarticleispublishedwithopenaccess",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Sleep and Biological Rhythms (2022) 20:473–480",
+  "author": "",
+  "year": "2022",
+  "category": "生活方式与综合管理",
+  "_file": "Effect-of-antihypertensive-medications-on-sleep-status-in-hypertensive-patients.pdf",
+  "_head": "Sleep and Biological Rhythms (2022) 20:473–480\nhttps://doi.org/10.1007/s41105-022-00391-8\nORIGINAL ARTICLE\nEffect of antihypertensive medications on sleep status in hypertensive\npatients\nZiqian Zeng2 · Yanan Yang1 · Yuewen Zhang1 · Xiuming Wu1 · Weizhong Chen1 · Dongqing Gu2\nReceived: 20 December 2021 / Accepted: 20 April 2022 / Published online: 18 May 2022\n© The Author(s), under exclusive licence to Japanese Society of Sleep Research 2022",
+  "topics": [
+   "睡眠与作息"
+  ],
+  "kgNodes": [
+   "sleepReg"
+  ]
+ },
+ {
+  "title": "Applied Microbiology and Biotechnology (2023) 107:1107–1117",
+  "author": "Effects of probiotics on hypertension",
+  "year": "2023",
+  "category": "生活方式与综合管理",
+  "_file": "Effects-of-probiotics-on-hypertension.pdf",
+  "_head": "Applied Microbiology and Biotechnology (2023) 107:1107–1117\nhttps://doi.org/10.1007/s00253-023-12369-8\nMINI-REVIEW\nEffects of probiotics on hypertension\nLin Yuan1,2 · Ying Li2 · Moutong Chen2 · Liang Xue2 · Juan Wang2 · Yu Ding2 · Qihui Gu2 · Jumei Zhang2 ·\nRunshi Yang2 · Hui Zhao2 · Xinqiang Xie2 · Qingping Wu2\nReceived: 9 September 2022 / Revised: 23 December 2022 / Accepted: 31 December 2022 / Published online: 17 January 2023\n© The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2023",
+  "topics": [
+   "家庭血压监测"
+  ],
+  "kgNodes": [
+   "homeBP"
+  ]
+ },
+ {
+  "title": "Abstracts/Atherosclerosis235(2014)e192–e301 e211",
+  "author": "population.Hypertensionwasaccompaniedmostfrequentlybyautoim-",
+  "year": "2014",
+  "category": "生活方式与综合管理",
+  "_file": "erden2014.pdf",
+  "_head": "Abstracts/Atherosclerosis235(2014)e192–e301 e211\ndisease which is the fourth common comorbidity in our hypertensive\npopulation.Hypertensionwasaccompaniedmostfrequentlybyautoim-\nmunehypothyroidismwhichmightsuggestarelationwithautoimmunity\nandhypertension.Furtherstudiesshouldbeconductedtoprovethisre-\nlation.\n46-Epidemiologyofcardiovasculardisesasesandhypertension\nEAS-0851.",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Exploration of patients practices related to home blood",
+  "author": "Despiteguidelinesand callsto actionfor homeblood pressuremonitoring (HBPM)fromorganizations including theAmerican",
+  "year": "2024",
+  "category": "生活方式与综合管理",
+  "_file": "Exploration-of-patients-practices-related-to-home-blood-pressure-monitoring.pdf",
+  "_head": "Journal of Human Hypertension\nwww.nature.com/jhh\nLETTER\n’\nExploration of patients practices related to home blood\npressure monitoring\n©TheAuthor(s),underexclusivelicencetoSpringerNatureLimited2023\nDespiteguidelinesand callsto actionfor homeblood pressuremonitoring (HBPM)fromorganizations including theAmerican",
+  "topics": [
+   "患者教育"
+  ],
+  "kgNodes": [
+   "homeBP"
+  ]
+ },
+ {
+  "title": "NeuralComputingandApplications",
+  "author": "",
+  "year": "",
+  "category": "生活方式与综合管理",
+  "_file": "fang2021.pdf",
+  "_head": "NeuralComputingandApplications\nhttps://doi.org/10.1007/s00521-021-06060-0\n(0123456789().,-volV)(0123456789,-().volV)\nS.I: ML4BD_SHS\nA hybrid machine learning approach for hypertension risk prediction\nMin Fang1 • Yingru Chen2 • Rui Xue1 • Huihui Wang3 • Nilesh Chakraborty4 • Ting Su1 •\nYuyan Dai4\nReceived:6December2020/Accepted:19April2021",
+  "topics": [
+   "家庭血压监测"
+  ],
+  "kgNodes": [
+   "homeBP"
+  ]
+ },
+ {
+  "title": "HypertensionResearch(2026)49:1006–1009",
+  "author": "",
+  "year": "2026",
+  "category": "生活方式与综合管理",
+  "_file": "Global-guidelines-recommendations-for-lifestyle-modifications-in-patients-with-hypertension.pdf",
+  "_head": "HypertensionResearch(2026)49:1006–1009\nhttps://doi.org/10.1038/s41440-025-02525-0\nCOMMENT\nfi\nGlobal guidelines recommendations for lifestyle modi cations in\npatients with hypertension\nKimika Arakawa1 Takuya Tsuchihashi2\n●",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "22001155 SSeevveenntthh IInntteerrnnaattiioonnaall CCoonnffeerreennccee oonn MMeeaassuurriinngg TTeecchhnnoollooggyy aanndd MMeecchhaattrroonniiccss AAuuttoommaattiioonn",
+  "author": "Modeling of hypertensive patient’ s",
+  "year": "",
+  "category": "生活方式与综合管理",
+  "_file": "guiling2015.pdf",
+  "_head": "22001155 SSeevveenntthh IInntteerrnnaattiioonnaall CCoonnffeerreennccee oonn MMeeaassuurriinngg TTeecchhnnoollooggyy aanndd MMeecchhaattrroonniiccss AAuuttoommaattiioonn\nModeling of hypertensive patient’ s\nbehavior based on the health information\nLiguiling,Zhangchundi,Mingyue,Yangliqun,Zhanglihua\nNursingInstituteofQiqihaerMedicalUniversity,Heilongjiang,161006,China\nE-mail:wnllggl@sohu.com\nAbstract- In order to further clearly understand the foundationcombinedwith the theory ofplannedbehavior\ninformation behavior mechanism of health behavior andthepeoplepreviousresearchachievement,established",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "HypertensionResearch(2024)47:2914–2916",
+  "author": "",
+  "year": "2024",
+  "category": "生活方式与综合管理",
+  "_file": "How-to-deal-with-a-hypertensive-patient-who-has-documented-non-adherence-to-the-prescribed.pdf",
+  "_head": "HypertensionResearch(2024)47:2914–2916\nhttps://doi.org/10.1038/s41440-024-01810-8\nCOMMENT\nHow to deal with a hypertensive patient who has documented non-\nadherence to the prescribed antihypertensive therapy?\nPanagiotis I. Georgianos1 ● Maria Divani2 ● Vassilios Liakopoulos1\nKeywords Adherence ● Ambulatory blood pressure ● Compliance ● Hypertension ● Therapeutic drug monitoring\nReceived:14June2024/Accepted:29June2024/Publishedonline:26July2024",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "John C. Landefeld, Sharad Jain, and Craig R. Keenan",
+  "author": "Contents",
+  "year": "",
+  "category": "生活方式与综合管理",
+  "_file": "Hypertension (1).pdf",
+  "_head": "Hypertension 20\nJohn C. Landefeld, Sharad Jain, and Craig R. Keenan\nContents\nIntroduction............................................................................ 386\nDiagnosis................................................................................ 387\nEvaluation.............................................................................. 387\nEvidenceforTreatment................................................................ 388\nGoalsofTreatment..................................................................... 388",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Akanksha Agrawal and M. Carolina Gongora Nieto",
+  "author": "Abbreviations",
+  "year": "2020",
+  "category": "生活方式与综合管理",
+  "_file": "Hypertension.pdf",
+  "_head": "Chapter 20\nHypertension\nAkanksha Agrawal and M. Carolina Gongora Nieto\nAbbreviations\nABPM Ambulatory blood pressure monitoring\nACE Angiotensin converting enzyme\nARB Angiotensin receptor blockers\nASCVD Atherosclerotic cardiovascular disease",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Nicole Thomas, DNP,RN,CCM 1",
+  "author": "(cid:1)Hypertension (cid:1) Hypertensionmanagement (cid:1)Cerebrovascularaccident",
+  "year": "2023",
+  "category": "生活方式与综合管理",
+  "_file": "Hypertensive-Management.pdf",
+  "_head": "Hypertensive Management\nNicole Thomas, DNP,RN,CCM 1\nKEYWORDS\n(cid:1)Hypertension (cid:1) Hypertensionmanagement (cid:1)Cerebrovascularaccident\n(cid:1)Bloodpressure (cid:1) Hypertensive\nKEYPOINTS\n(cid:1) Ineffectivehypertensionmanagementisakeyfactorinthedevelopmentofcardiovascular\ndisease.",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Profile of hypertensive patients: biosocial characteristics,",
+  "author": "Perfil de um grupo de hipertensos: aspectos biossociais",
+  "year": "",
+  "category": "生活方式与综合管理",
+  "_file": "jesus2008.pdf",
+  "_head": "Artigo Original\nProfile of hypertensive patients: biosocial characteristics,\nknowledge, and treatment compliance*\nPerfil de um grupo de hipertensos: aspectos biossociais, conhecimentos e adesão ao tratamento\nPerfil de un grupo de hipertensos: aspectos biosociales, conocimientos y adhesión al tratamiento\nElaine dos Santos Jesus1, Monica Aparecida de Oliveira Augusto1, Josiane\nGusmão2, Décio Mion Júnior3, Kátia Ortega4, Angela Maria Geraldo Pierin5\nABSTRACT",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "M.D., M.A.N.Z.C.P., D.P.M.",
+  "author": "This paper describes a study of personality traits",
+  "year": "1971",
+  "category": "生活方式与综合管理",
+  "_file": "kidson1971.pdf",
+  "_head": "Aust. NZ. 1. Psychiatry\n(1971) 5: 139\nPERSONALITY FACTORS IN\nHYPERTENSION*\nMALCOLM A. KIDSON‘\nM.D., M.A.N.Z.C.P., D.P.M.\nSYNOPSIS\nThis paper describes a study of personality traits and psychological symptoms in hyper-",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Hypertensive patients’ knowledge of high blood pressure",
+  "author": "Karin I Kjellgren’",
+  "year": "1996",
+  "category": "生活方式与综合管理",
+  "_file": "kjellgren1997.pdf",
+  "_head": "ORIGINAL PAPER\nHypertensive patients’ knowledge of high blood pressure\nKarin I Kjellgren’, Staffan Svenssonl, Johan Ahlner’ and Roger SaIj6*\n’\nDepartment of Clinical Pharmacology, Faculty of Health Sciences, Department of Communication Studies, Linkiiping Univer-\nsity, Linkiiping, Sweden.\nReceived June 1996. Accepted February 1997.\nScand J Prim Health Care 1997;15:188-192. ISSN 0281-3432 what high blood pressure implies in functional terms. Knowl-",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Vascular Health and Risk Management Dovepress",
+  "author": "OpenAccessFullTextArticle ORIGINAL RESEARCH",
+  "year": "",
+  "category": "生活方式与综合管理",
+  "_file": "Knowledge-Attitude-and-Practice-Toward-Hypertension-Among-Hypertensive-Patients-Residing.pdf",
+  "_head": "Vascular Health and Risk Management Dovepress\nopenaccesstoscientificandmedicalresearch\nOpenAccessFullTextArticle ORIGINAL RESEARCH\nKnowledge, Attitude, and Practice Toward\nHypertension Among Hypertensive Patients\nResiding in Lebanon\nMarc Machaalani 1, Houssam Seifeddine1, Abdallah Ali1,*, Hassan Bitar1,*, Oukba Briman1,*,\nMirna N Chahine 1–4",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "2018 9th International Conference on Information Technology in Medicine and Education",
+  "author": "Hypertensive Patients",
+  "year": "2018",
+  "category": "生活方式与综合管理",
+  "_file": "li2018.pdf",
+  "_head": "2018 9th International Conference on Information Technology in Medicine and Education\n(cid:3)(cid:3)\nResearch on Information Required in Health Behavior Changes of\nHypertensive Patients\nLi guiling Tang meiling Wu xiuqin\n(cid:756)u chunmiao Zhan weixin Wu lihong\nNursing Institute of Qiqihaer Medical\nUniversity",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Essential Hypertension and Social Coping Behavior",
+  "author": "Mr. Wolfgang Linden & Dr. Michael Feuerstein Ph.D.",
+  "year": "1981",
+  "category": "生活方式与综合管理",
+  "_file": "linden1981.pdf",
+  "_head": "Journal of Human Stress\nISSN: 0097-840X (Print) (Online) Journal homepage: http://www.tandfonline.com/loi/vzhs20\nEssential Hypertension and Social Coping Behavior\nMr. Wolfgang Linden & Dr. Michael Feuerstein Ph.D.\nTo cite this article: Mr. Wolfgang Linden & Dr. Michael Feuerstein Ph.D. (1981) Essential\nHypertension and Social Coping Behavior, Journal of Human Stress, 7:1, 28-34, DOI:\n10.1080/0097840X.1981.9934541\nTo link to this article: http://dx.doi.org/10.1080/0097840X.1981.9934541",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Lifestyle Behaviors in Treated Hypertensives",
+  "author": "as Prediction of Blood Pressure Control",
+  "year": "1986",
+  "category": "生活方式与综合管理",
+  "_file": "macdonald1988.pdf",
+  "_head": "Lifestyle Behaviors in Treated Hypertensives\nas Prediction of Blood Pressure Control\nMary B. MacDonald, MCEd BSN RN; Joan E. Sawatzky, MCEd BSN RN;\nThomas W. Wilson, MD\nThiss tudy was designed to determine whether Igestyle behaviors in treated hypertensives were\npredictive of bloodpmrec ontrol. Sixty clients attending a hypertension outpatient clinic were\ninterviewed regamling spec$c @iyle behaviors, and a mting supine bloodpmsure was recoml-\ned. Of the behaviorsevaluated, analysis of varianceshowedt hat not smoking wassignijicantly",
+  "topics": [
+   "生活方式干预"
+  ],
+  "kgNodes": [
+   "briskWalk"
+  ]
+ },
+ {
+  "title": "HypertensionResearch(2023)46:544–545",
+  "author": "",
+  "year": "2023",
+  "category": "生活方式与综合管理",
+  "_file": "Phenotypic-variations-of-hypertension-at-high-altitude.pdf",
+  "_head": "HypertensionResearch(2023)46:544–545\nhttps://doi.org/10.1038/s41440-022-01100-1\nCORRESPONDENCE\n“ ”\nPhenotypic variations of hypertension at high altitude\nOffdan Narvaez-Guerra1 Karela Herrera-Enriquez2\n●\nKeywords Hypertension ● Altitude ● Prevalence ● Phenotypes",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Pro les of echocardiographic features associated with blood",
+  "author": "Wenlang Zhao1",
+  "year": "2025",
+  "category": "生活方式与综合管理",
+  "_file": "Profiles-of-echocardiographic-features-associated-with-blood-pressure-in-patients-with-hypertension.pdf",
+  "_head": "Journal of Human Hypertension\nwww.nature.com/jhh\nARTICLE\nfi\nPro les of echocardiographic features associated with blood\npressure in patients with hypertension\nWenlang Zhao1,2, MingdanWang1,2, Pan Zhou1, Ziyu Wang1,Xuan Deng1,Jiangtao Li1, NaYang1, Lizhen Han1, ZhaoYang1,\n✉ ✉",
+  "topics": [
+   "心脏靶器官"
+  ],
+  "kgNodes": [
+   "hf"
+  ]
+ },
+ {
+  "title": "Selten besprochene Fragen",
+  "author": "zum Bluthochdruck",
+  "year": "2018",
+  "category": "生活方式与综合管理",
+  "_file": "Selten-besprochene-Fragen-zum-Bluthochdruck.pdf",
+  "_head": "2\nTHEMEN UND AUTOREN\nIN DIESER AUSGABE\nSelten besprochene Fragen\nzum Bluthochdruck\nProf. Dr. med. Prof. Dr. med.\nMarkus van der Giet Walter Z idek\nEditorial zum Schwerpunkt von Prof. Dr. Markus van der Giet Charité Universitäts- Meoclinic GmbH,",
+  "topics": [
+   "大模型推理"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "Behavioral and Environmental Aspects of",
+  "author": "Hypertension",
+  "year": "1978",
+  "category": "生活方式与综合管理",
+  "_file": "shapiro1978.pdf",
+  "_head": "Journal of Human Stress\nISSN: 0097-840X (Print) (Online) Journal homepage: http://www.tandfonline.com/loi/vzhs20\nBehavioral and Environmental Aspects of\nHypertension\nAlvin P. Shapiro\nTo cite this article: Alvin P. Shapiro (1978) Behavioral and Environmental Aspects of\nHypertension, Journal of Human Stress, 4:4, 9-17, DOI: 10.1080/0097840X.1978.10545981\nTo link to this article: http://dx.doi.org/10.1080/0097840X.1978.10545981",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "nature reviews nephrology https://doi.org/10.1038/s41581-022-00654-0",
+  "author": "The gut microbiome",
+  "year": "2023",
+  "category": "生活方式与综合管理",
+  "_file": "The-gut-microbiome-and-hypertension.pdf",
+  "_head": "nature reviews nephrology https://doi.org/10.1038/s41581-022-00654-0\nReview article Check for updates\nThe gut microbiome\nand hypertension\nJoanne A. O’Donnell1,4, Tenghao Zheng1,4, Guillaume Meric2 & Francine Z. Marques 1,3\nAbstract Sections\nA large body of evidence has emerged in the past decade supporting a Introduction\nrole for the gut microbiome in the regulation of blood pressure. The field",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "HypertensionResearch(2024)47:1229–1230",
+  "author": "Therapeutic intervention exploring hypertensive patients who",
+  "year": "2024",
+  "category": "生活方式与综合管理",
+  "_file": "Therapeutic-intervention-exploring-hypertensive-patients-who-respond-to-health-coaching-behavior.pdf",
+  "_head": "HypertensionResearch(2024)47:1229–1230\nhttps://doi.org/10.1038/s41440-024-01601-1\nCOMMENT\nTherapeutic intervention exploring hypertensive patients who\nfi\nrespond to health coaching behavior modi cation therapy\nKeisuke Narita1\nKeywords Behavioral modification ● Diet ● Preventive medicine ● Hypertension",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ },
+ {
+  "title": "HypertensionResearch(2025)48:3046–3048",
+  "author": "Understanding clinical inertia in hypertension management:",
+  "year": "2025",
+  "category": "生活方式与综合管理",
+  "_file": "Understanding-clinical-inertia-in-hypertension-management-clues-from-real-world-data.pdf",
+  "_head": "HypertensionResearch(2025)48:3046–3048\nhttps://doi.org/10.1038/s41440-025-02359-w\nCOMMENT\nUnderstanding clinical inertia in hypertension management:\nclues from real-world data\nMichihiro Satoh1,2,3\nKeywords Hypertension ● Clinical inertia ● Guideline adherence ● Real-world data ● Blood pressure\nReceived:3August2025/Accepted:16August2025/Publishedonline:27August2025",
+  "topics": [
+   "综合证据"
+  ],
+  "kgNodes": []
+ }
+]

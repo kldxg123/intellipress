@@ -2,7 +2,9 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import { useApp } from "@/state/store"
 import { CASES } from "@/lib/data"
 import { assessCase, BP_GRADE_TABLE, MATRIX_ROWS, MATRIX_COLS, RISK_MATRIX, CATEGORY_LABEL, type Assessment } from "@/lib/guidelines"
-import { queryCaseSubgraph, NODE_TYPE_COLORS, type KGNode, type KGEdge } from "@/lib/knowledgeGraph"
+import { queryCaseSubgraph, NODE_TYPE_COLORS, evidenceCount, caseEvidence, KG_NODES, type KGNode, type KGEdge } from "@/lib/knowledgeGraph"
+import { LIT_TOTAL, LIT_BY_CATEGORY, type LitCategory, type LiteratureItem } from "@/lib/literature"
+import type { CaseId } from "@/lib/data"
 import { callDeepSeek, REPLAY_TEXTS, type LlmMode } from "@/lib/deepseek"
 import { Prov } from "@/components/Prov"
 import { StatusTag } from "@/components/StepCommon"
@@ -152,7 +154,7 @@ export function Step2Screening({ onDone }: { onDone: () => void }) {
       <div className="mb-4 rounded-lg border border-cyan-200 bg-cyan-50 px-4 py-2.5 text-center">
         <span className="text-[13px] font-medium text-cyan-800">
           判断由<span className="mx-1 font-bold text-cyan-800">指南规则引擎</span>与
-          <span className="mx-1 font-bold text-cyan-800">医学知识图谱</span>作出，大模型仅负责解释
+          <span className="mx-1 font-bold text-cyan-800">医学知识图谱</span>作出（含 {LIT_TOTAL} 篇文献证据），大模型仅负责解释
         </span>
       </div>
 
@@ -192,6 +194,9 @@ export function Step2Screening({ onDone }: { onDone: () => void }) {
           active={phase !== "engine"}
         />
       </div>
+
+      {/* 行 1.5：证据文献列表（图谱节点关联，按分类分组） */}
+      {phase !== "engine" && <EvidencePanel caseId={caseDef.id} />}
 
       {/* 行 2：AI 解读（仅解释） + SHAP 参考 */}
       <div className="grid gap-4 lg:grid-cols-5">
@@ -456,10 +461,18 @@ function KGPanel({ caseId, subgraph, kgEntities, kgNeighbors, kgClauses, active 
         {subgraph.nodes.filter((n) => !subgraph.entityIds.includes(n.id)).map((n) => {
           const p = layout.get(n.id)!
           const vis = visibleIds.has(n.id)
+          const ev = evidenceCount(n.id)
           return (
             <g key={n.id} opacity={vis ? 1 : 0.15} className="transition-opacity duration-500">
               <circle cx={p.x} cy={p.y} r={13} fill="#ffffff" stroke={NODE_TYPE_COLORS[n.type]} strokeWidth={1.4} />
               <text x={p.x} y={p.y + 24} textAnchor="middle" fontSize={8.5} fill={vis ? "#64748b" : "#cbd5e1"}>{n.label}</text>
+              {vis && ev > 0 && (
+                <g>
+                  <circle cx={p.x + 11} cy={p.y - 11} r={6.5} fill={NODE_TYPE_COLORS.literature} />
+                  <text x={p.x + 11} y={p.y - 8.6} textAnchor="middle" fontSize={7} fontWeight={700} fill="#ffffff">{ev}</text>
+                  <title>证据 {ev} 篇文献</title>
+                </g>
+              )}
             </g>
           )
         })}
@@ -468,11 +481,19 @@ function KGPanel({ caseId, subgraph, kgEntities, kgNeighbors, kgClauses, active 
           const n = nodeById(id)!
           const p = layout.get(id)!
           const vis = i < kgEntities
+          const ev = evidenceCount(id)
           return (
             <g key={id} opacity={vis ? 1 : 0.15} className="transition-opacity duration-500">
               <circle cx={p.x} cy={p.y} r={17} fill="#ffffff" stroke={NODE_TYPE_COLORS[n.type]} strokeWidth={2.2}
                 style={vis ? { filter: `drop-shadow(0 0 4px ${NODE_TYPE_COLORS[n.type]}44)` } : undefined} />
               <text x={p.x} y={p.y + 30} textAnchor="middle" fontSize={9} fontWeight={600} fill={vis ? "#334155" : "#cbd5e1"}>{n.label}</text>
+              {vis && ev > 0 && (
+                <g>
+                  <circle cx={p.x + 14} cy={p.y - 14} r={7} fill={NODE_TYPE_COLORS.literature} />
+                  <text x={p.x + 14} y={p.y - 11.4} textAnchor="middle" fontSize={7.5} fontWeight={700} fill="#ffffff">{ev}</text>
+                  <title>证据 {ev} 篇文献</title>
+                </g>
+              )}
             </g>
           )
         })}
@@ -491,6 +512,10 @@ function KGPanel({ caseId, subgraph, kgEntities, kgNeighbors, kgClauses, active 
             {{ disease: "疾病", riskfactor: "危险因素", drug: "药物", intervention: "干预", indicator: "指标" }[t]}
           </span>
         ))}
+        <span className="flex items-center gap-1">
+          <span className="inline-block h-2 w-2 rounded-full" style={{ background: NODE_TYPE_COLORS.literature }} />
+          证据文献（节点角标为关联篇数）
+        </span>
       </div>
       {/* 命中条款 */}
       <div className="mt-2 border-t border-slate-200 pt-2">
@@ -505,6 +530,85 @@ function KGPanel({ caseId, subgraph, kgEntities, kgNeighbors, kgClauses, active 
           ))}
           {kgClauses === 0 && <div className="font-mono-data text-[9px] text-slate-400">条款检索中…</div>}
         </div>
+      </div>
+    </div>
+  )
+}
+
+// ── 证据文献列表：五大分类分组，命中当前病例子图节点的文献置顶高亮，默认每组 3 条可展开 ──
+const LIT_CATEGORY_ORDER: LitCategory[] = ["大模型×高血压", "数字孪生", "真实数据", "数据统计", "生活方式与综合管理"]
+
+function EvidencePanel({ caseId }: { caseId: CaseId }) {
+  const { hits } = useMemo(() => caseEvidence(caseId), [caseId])
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({})
+  const nodeLabel = useMemo(() => new Map(KG_NODES.map((n) => [n.id, n.label])), [])
+  const hitIds = useMemo(() => new Set(hits.map((h) => h.lit.id)), [hits])
+  const hitVia = useMemo(() => new Map(hits.map((h) => [h.lit.id, h.viaNodes])), [hits])
+
+  return (
+    <div className="panel fade-up mb-4 p-4" data-lit-panel>
+      <div className="mb-2 flex items-center justify-between">
+        <span className="font-mono-data text-[10px] tracking-widest text-slate-500">
+          证据文献列表 · 命中 <span className="font-bold text-indigo-600">{hits.length}</span> 篇 / 库共 {LIT_TOTAL} 篇
+        </span>
+        <span className="rounded border border-indigo-200 bg-indigo-50 px-1.5 py-0.5 font-mono-data text-[9px] text-indigo-600">文献证据库 · 经「证据支持」边挂接图谱</span>
+      </div>
+      {hits.length === 0 && (
+        <div className="py-3 text-center font-mono-data text-[10px] text-slate-400">当前病例暂无直接关联证据文献</div>
+      )}
+      <div className="grid gap-3 lg:grid-cols-2">
+        {LIT_CATEGORY_ORDER.map((cat) => {
+          const all = LIT_BY_CATEGORY[cat] ?? []
+          const sorted = [...all].sort((a, b) => Number(hitIds.has(b.id)) - Number(hitIds.has(a.id)))
+          const catHits = sorted.filter((it) => hitIds.has(it.id)).length
+          const open = !!expanded[cat]
+          const shown = open ? sorted : sorted.slice(0, 3)
+          return (
+            <div key={cat} className="rounded-lg border border-slate-200 bg-slate-50/60 p-2.5" data-lit-group={cat}>
+              <div className="mb-1.5 flex items-center gap-2">
+                <span className="text-[10.5px] font-semibold text-indigo-700">{cat}</span>
+                <span className="font-mono-data text-[9px] text-slate-400">命中 {catHits} / 共 {all.length} 篇</span>
+              </div>
+              <div className="space-y-1">
+                {shown.map((lit: LiteratureItem) => {
+                  const hit = hitIds.has(lit.id)
+                  const via = hitVia.get(lit.id) ?? []
+                  return (
+                    <div
+                      key={lit.id}
+                      data-lit-row
+                      className={`flex items-start gap-2 rounded border px-2 py-1 ${
+                        hit ? "border-indigo-200 bg-indigo-50/70" : "border-slate-200 bg-white opacity-70"
+                      }`}
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="truncate text-[10px] leading-snug text-slate-700" title={lit.title}>{lit.title}</div>
+                        <div className="font-mono-data text-[9px] text-slate-500">
+                          {lit.author} · {lit.year || "年份不详"}
+                          {via.length > 0 && (
+                            <span className="ml-1 text-indigo-400">关联节点：{via.map((n) => nodeLabel.get(n) ?? n).join("、")}</span>
+                          )}
+                        </div>
+                      </div>
+                      {hit && (
+                        <span className="shrink-0 rounded border border-indigo-200 bg-indigo-50 px-1 py-0.5 font-mono-data text-[8.5px] text-indigo-600">命中</span>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+              {all.length > 3 && (
+                <button
+                  onClick={() => setExpanded((s) => ({ ...s, [cat]: !open }))}
+                  className="mt-1.5 font-mono-data text-[9px] text-indigo-500 hover:text-indigo-700"
+                  data-lit-expand={cat}
+                >
+                  {open ? "▲ 收起" : `▼ 展开全部 (${all.length})`}
+                </button>
+              )}
+            </div>
+          )
+        })}
       </div>
     </div>
   )
