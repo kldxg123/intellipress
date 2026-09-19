@@ -27,8 +27,8 @@ try {
   const clickButton = (txt) =>
     page.evaluate((t) => [...document.querySelectorAll("button")].find((b) => b.innerText.includes(t))?.click(), txt)
 
-  await page.goto(URL, { waitUntil: "networkidle2", timeout: 45000 })
-  await page.waitForFunction(() => document.body.innerText.includes("本演示仅对受邀人员开放"), { timeout: 15000 })
+  await page.goto(URL, { waitUntil: "domcontentloaded", timeout: 90000 })
+  await page.waitForFunction(() => document.body.innerText.includes("本演示仅对受邀人员开放"), { timeout: 30000 })
   await page.type('input[type="password"]', "Aa123456")
   await page.keyboard.press("Enter")
   await page.waitForFunction(() => document.body.innerText.includes("示教病例设置"), { timeout: 10000 })
