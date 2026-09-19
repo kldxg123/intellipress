@@ -1,0 +1,49 @@
+name: Verify Live LLM
+
+# 远程验收（本机网络无法直连 workers.dev，借 GitHub Runner 海外网络执行）：
+# ① curl 正/负向打 Worker ② puppeteer 走公网站点阶段2 断言 LIVE 徽标
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      WORKER_URL: https://intellipress-llm-proxy.1584800184.workers.dev
+      CHROME_PATH: /usr/bin/google-chrome
+    steps:
+      - name: Worker 正向 SSE（真实 DeepSeek 流）
+        run: |
+          OUT=$(curl -sN -m 90 -X POST "$WORKER_URL/chat/completions" \
+            -H "Origin: https://kldxg123.github.io" -H "Content-Type: application/json" \
+            -d '{"messages":[{"role":"user","content":"用一句话回答：高血压的定义是什么"}]}')
+          echo "$OUT" | head -c 500
+          echo "$OUT" | grep -q "data:" || { echo "::error::未收到 SSE 流"; exit 1; }
+          echo "$OUT" | grep -q "\[DONE\]" || { echo "::error::流未正常结束"; exit 1; }
+
+      - name: Worker 负向（错误 Origin → 403 / GET → 404）
+        run: |
+          C1=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$WORKER_URL/chat/completions" \
+            -H "Origin: https://evil.example.com" -H "Content-Type: application/json" \
+            -d '{"messages":[{"role":"user","content":"hi"}]}')
+          C2=$(curl -s -o /dev/null -w "%{http_code}" "$WORKER_URL/chat/completions" \
+            -H "Origin: https://kldxg123.github.io")
+          echo "evil-origin=$C1 get=$C2"
+          [ "$C1" = "403" ] && [ "$C2" = "404" ] || { echo "::error::负向用例不符"; exit 1; }
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: 公网站点阶段2 LIVE 徽标断言
+        run: node scripts/verify-live.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verify-shots-v9
+          path: verify-shots-v9/

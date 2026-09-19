@@ -30,9 +30,14 @@ export interface GradeResult {
 }
 
 export function gradeBP(sbp: number, dbp: number): GradeResult {
-  // 收缩/舒张分属不同级别时取较高者
-  const sbpLevel = BP_GRADE_TABLE.find((r) => sbp >= r.sbpLo && sbp <= r.sbpHi)!.level
-  const dbpLevel = BP_GRADE_TABLE.find((r) => dbp >= r.dbpLo && dbp <= r.dbpHi)!.level
+  if (!Number.isFinite(sbp) || !Number.isFinite(dbp) || sbp <= 0 || dbp <= 0) {
+    throw new RangeError("血压必须为有限正数")
+  }
+  // 使用连续下限，覆盖多次测量均值产生的小数，不在 139 与 140 等边界留空隙。
+  const sbpRow = [...BP_GRADE_TABLE].reverse().find((r) => sbp >= r.sbpLo)!
+  const dbpRow = [...BP_GRADE_TABLE].reverse().find((r) => dbp >= r.dbpLo)!
+  const sbpLevel = sbpRow.level
+  const dbpLevel = dbpRow.level
   const level = Math.max(sbpLevel, dbpLevel)
   const hitIndex = BP_GRADE_TABLE.findIndex((r) => r.level === level)
   const row = BP_GRADE_TABLE[hitIndex]
@@ -40,7 +45,7 @@ export function gradeBP(sbp: number, dbp: number): GradeResult {
     row,
     level,
     label: row.label,
-    basis: `SBP ${sbp} → ${BP_GRADE_TABLE.find((r) => sbp >= r.sbpLo && sbp <= r.sbpHi)!.label}；DBP ${dbp} → ${BP_GRADE_TABLE.find((r) => dbp >= r.dbpLo && dbp <= r.dbpHi)!.label}；取较高者`,
+    basis: `SBP ${sbp} → ${sbpRow.label}；DBP ${dbp} → ${dbpRow.label}；取较高者`,
     hitIndex,
   }
 }

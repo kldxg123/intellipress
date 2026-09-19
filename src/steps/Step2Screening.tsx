@@ -162,12 +162,12 @@ export function Step2Screening({ onDone }: { onDone: () => void }) {
         <StatusTag color="violet">{phaseTag}</StatusTag>
         {mode === "live" && (
           <span className="rounded border border-emerald-300 bg-emerald-50 px-2 py-0.5 font-mono-data text-[10px] text-emerald-600">
-            ● 实时解读 · DeepSeek{latency !== null ? ` · 首响 ${latency}ms` : ""}
+            ● 实时解读 · DeepSeek{latency !== null ? ` · 耗时 ${latency}ms` : ""}
           </span>
         )}
         {mode === "replay" && (
           <span className="rounded border border-amber-300 bg-amber-50 px-2 py-0.5 font-mono-data text-[10px] text-amber-600">
-            ◐ 回放模式（API 不可用，预置解释文案兜底）
+            ◐ 回放模式（API 失败或响应未通过完整性校验，使用预置文案）
           </span>
         )}
         <span className="ml-auto font-mono-data text-xs text-slate-500">

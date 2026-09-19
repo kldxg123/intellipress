@@ -1,0 +1,9 @@
+{
+  "name": "intellipress-llm-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "IntelliPress DeepSeek 安全代理（Cloudflare Worker）",
+  "devDependencies": {
+    "wrangler": "4.38.0"
+  }
+}

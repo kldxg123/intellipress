@@ -1,0 +1,27 @@
+import {buildSync} from 'esbuild';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import assert from 'node:assert/strict';
+const out=resolve('../output/method-validation');
+mkdirSync('node_modules/.tmp',{recursive:true});
+buildSync({entryPoints:['src/lib/measurement.ts'],bundle:true,format:'esm',outfile:'node_modules/.tmp/measurement.mjs'});
+buildSync({entryPoints:['src/lib/guidelines.ts'],bundle:true,format:'esm',outfile:'node_modules/.tmp/measurement-grade.mjs'});
+const {summarizeRepeatedBP}=await import(pathToFileURL(resolve('node_modules/.tmp/measurement.mjs')));
+const {gradeBP}=await import(pathToFileURL(resolve('node_modules/.tmp/measurement-grade.mjs')));
+const sample=summarizeRepeatedBP([{sbp:138,dbp:80},{sbp:141,dbp:82}]);
+assert.equal(sample.mean.sbp,139.5); assert.equal(sample.grade.level,0); assert.equal(sample.thresholdDisagreement,true);
+assert.throws(()=>summarizeRepeatedBP([{sbp:120,dbp:80}]));
+assert.throws(()=>summarizeRepeatedBP([{sbp:120,dbp:80},{sbp:NaN,dbp:80}]));
+assert.throws(()=>summarizeRepeatedBP([{sbp:70,dbp:80},{sbp:120,dbp:80}]));
+const records=JSON.parse(readFileSync(out+'/records.json','utf8'));
+const predictions=records.map(r=>{
+ const [a,b,target]=r.readings; const summary=summarizeRepeatedBP([a,b]);
+ const methods={first:a,second:b,mean12:summary.mean,peak12:summary.peak};
+ return {...r,targetLevel:gradeBP(target.sbp,target.dbp).level,thresholdDisagreement:summary.thresholdDisagreement,methods:Object.fromEntries(Object.entries(methods).map(([k,p])=>[k,{...p,level:gradeBP(p.sbp,p.dbp).level}]))};
+});
+writeFileSync(out+'/predictions.json',JSON.stringify(predictions));
+const sources=['src/lib/measurement.ts','src/lib/guidelines.ts','scripts/evaluate-measurement.mjs'];
+writeFileSync(out+'/source-hashes.json',JSON.stringify(Object.fromEntries(sources.map(p=>[p,createHash('sha256').update(readFileSync(p)).digest('hex')])),null,2));
+console.log(`Tests passed; evaluated ${predictions.length} participants through actual TypeScript modules; no network/API calls.`);
